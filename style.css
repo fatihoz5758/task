@@ -33,11 +33,11 @@ main {
 footer {
     grid-area: footer;
 }
-
-body {
+/* grid burada kullanılmamış aslında */
+/* body {
     display: grid;
     background-color: white;
-    /* gap: 10px; */
+    gap: 10px; 
     height: 100%;
     grid-template-rows: 160px auto 400px 100px;
     grid-template-areas:
@@ -46,7 +46,8 @@ body {
         "row row row row row row "
         "footer footer footer footer footer footer";
     justify-content: space-between;
-}
+} */
+
 
 /* header  bölümü */
 header {
@@ -159,6 +160,7 @@ main {
 
 }
 
+
 .sol_section {
     flex-direction: row;
     text-align: center;
@@ -199,6 +201,8 @@ main {
     background-color: #5472D2;
 }
 
+
+
 .sag_section {
     width: 75%;
     display: flex;
@@ -227,6 +231,28 @@ main {
 .sag a:hover {
     color: #5472D2;
     font-size: 20px;
+}
+@media (max-width:678px) {
+    .row{
+        flex-direction: column;
+    }
+    .sol_section {
+        
+        width: 100%;
+    }
+    .sol_section h2 {
+        font-size: 22px;
+        text-align: center;
+        padding: 10px;
+        margin: 0;
+    }.sol_section a {
+        padding: 15px 5px;
+    }
+    .sag_section {
+    width: 985;
+
+        justify-content: center;
+    }
 }
 
 /* footer bölümü */
