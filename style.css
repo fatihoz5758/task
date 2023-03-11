@@ -37,9 +37,8 @@ footer {
 body {
     display: grid;
     background-color: white;
-    /* gap: 10px; */
     height: 100%;
-    grid-template-rows: 160px auto 400px 100px;
+    grid-template-rows: 100px auto 400px 100px;
     grid-template-areas:
         "header header header header header header"
         "main main main main main main"
@@ -51,36 +50,42 @@ body {
 /* header  bölümü */
 header {
     display: flex;
-    margin: 10px;
+    padding: 10px;
     justify-content: space-between;
+    background: white;
 
 }
 
 .logo {
-    width: 15%;
+    width: 300px;
     text-align: center;
-    margin-left: 100px;
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
 }
 
 .logo img {
-    width: 60%;
-    height: 60%;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 10px;
+   
 }
 
 .logo h3 {
     margin: 5px auto;
-    font-size: 20px;
+    font-size: 25px;
     color: rgb(218, 137, 16);
     font-weight: bold;
-    text-shadow: 2px 2px 0px #444;
+    text-shadow: 0px 0px 2px black;
 }
 
 
 nav {
     display: flex;
-    padding: 2%;
     justify-content: space-around;
     align-items: center;
+    padding-right: 20px;
 
 
 }
@@ -88,11 +93,11 @@ nav {
 nav ul li {
     list-style-type: none;
     display: inline-block;
-    padding: 8px 10px;
+    padding: 8px 20px;
 }
 
 nav ul li a {
-    color: #444;
+    color: black;
     text-decoration: none;
     font-size: 25px;
     font-weight: bold;
@@ -101,20 +106,23 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: orangered;
+    color: #da8910;
 }
 
 .ileti {
-    border: 1px solid black;
+    border: 0px solid black;
     padding: 8px 30px;
-    color: #f0e7e7;
-    background-color: rgba(4, 9, 30, 0.9);
-    box-shadow: 10px 10px 1px rgb(110, 106, 106);
+    color: #241d1d;
+    background-color: #da8910;
+    box-shadow: 10px 10px 1px rgb(95, 91, 91);
     transition: 0.8s;
+    border-radius: 10px;
 }
 
 .ileti:hover {
     box-shadow: none;
+    color: #f0e7e7;
+    transition: 0.5s;
 
 }
 
@@ -160,19 +168,15 @@ main {
 }
 
 .sol_section {
-    flex-direction: row;
     text-align: center;
     font-weight: bold;
     width: 25%;
-    justify-content: center;
+    margin: 20px 50px 0px 10px;
 }
 
 .sol_section h2 {
-    display: block;
-    font-size: 22px;
+    font-size: 25px;
     text-align: center;
-    padding: 10px;
-    margin-left: 25%;   
 }
 
 .sol_section a {
@@ -185,16 +189,11 @@ main {
     margin: 10px auto;
     text-decoration: none;
     color: #f0e7e7;
-    width: 100%;
-    font-size: 18px;
+    width: 90%;
+    font-size: 22px;
 
 }
-.sol_section p{
-    font-size: 18px;
-    display: block;
-    margin-left: 15%;
-    
-}
+
 .sol_section a:hover {
     background-color: #5472D2;
 }
@@ -203,14 +202,15 @@ main {
     width: 75%;
     display: flex;
     text-align: center;
-    gap: 20px;
-    padding-left: 10%;
+    gap: 10px;
+    /* padding-left: 100px; */
+    margin-top: 50px;
 }
 
 .sag_section img {
     margin-top: 125px;
-    width: 90%;
-    height: 30%;
+    width: 225px;
+    height: 160px;
     padding: 5px;
     box-shadow: 0 0 20px 0 rgba(34, 33, 33, 0.3);
 
@@ -219,20 +219,20 @@ main {
 .sag a {
     text-decoration: none;
     color: #444;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: bold;
     margin-top: 20px;
 }
 
 .sag a:hover {
     color: #5472D2;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 /* footer bölümü */
 
 footer {
-    margin-top: 50px auto;
+    margin-top: 50px;
     width: 90%;
     padding: 30px;
     text-align: center;
@@ -240,4 +240,78 @@ footer {
 
 footer a {
     text-decoration: none;
+}
+
+@media (max-width:675px) {
+
+    body {
+        display: grid;
+        background-color: white;
+        height: 100%;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+            "header header header header header header"
+            "main main main main main main"
+            "row row row row row row "
+            "footer footer footer footer footer footer";
+        justify-content: space-between;
+    }
+
+    header {
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+    }
+
+    .logo {
+        display: flex;
+        margin: 20px auto auto auto;
+        width: 50%;
+        text-align: center;
+      
+    }
+
+    nav {
+        display: flex;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 5px;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .sol_section {
+        width: 100%;
+    }
+
+    .sol_section h2 {
+        font-size: 22px;
+        text-align: center;
+        padding: 10px;
+        margin: 0;
+    }
+
+    .sol_section a {
+        padding: 15px 5px;
+    }
+
+    .sag_section {
+        flex-direction: column;
+        width: 50%;
+        margin: auto auto auto auto;
+
+    }
+
+    .sag_section img {
+        margin-top: 30px;
+        width: 100%;
+    }
 }
